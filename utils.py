@@ -58,3 +58,9 @@ def find_student_by_id(students, student_id):
         if student["id"] == student_id:
             return index, student
     return None, None
+
+
+def find_students_by_name(students, name):
+    """Ism bo'yicha o'quvchilarni qidirish."""
+    found_students = [student for student in students if student["name"].lower() == name.lower()]
+    return found_students
